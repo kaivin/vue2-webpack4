@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "core/setting";
+@import "core/css3";
+@import "core/media-queries";
+@import "core/mixin";
+@import "core/grid";
+
+// 时间间隔样式
+.interval-wrapper{
+    .title-panel{
+      text-align: right;
+      line-height: 32px;
+    }
+    .interval-content{
+      padding:0;
+      label{
+        float:left;
+        margin:0;
+        height:32px;
+        line-height: 32px;
+        input{
+          width:124px;
+          @extend %fl;
+        }
+        span{
+          color: $red;
+          line-height: 32px;
+          margin:0 20px 0 10px;
+        }
+      }
+      p{
+        line-height: 32px;
+        float:left;
+        color:#999;
+      }
+    }
+    .interval-panel{
+      padding:0;
+      .interval-wrap{
+        width:100%;
+        @extend %clearfix;
+        .interval-select{
+          width:360px;
+          @extend %fl;
+          font-size:0;
+          >span{
+            margin:0 10px;
+            line-height: 32px;
+            font-size:14px;
+            @extend %fl;
+          }
+        }
+        >button{
+          margin-right:15px;
+        }
+        >button,>p{
+          float:left;
+        }
+        >p{
+          color:#999;
+          line-height: 32px;
+        }
+      }
+    }
+    .w160{
+      width:160px;
+    }
+  }
+  
+  .interval-list{
+    width:100%;
+    @extend %clearfix;
+    li{
+      width:160px;
+      height:32px;
+      border:1px solid #dcdcdc;
+      background:#fff;
+      position:relative;
+      text-align:center;
+      float:left;
+      margin:0 20px 20px 0;
+      &:hover{
+        border:1px solid $primary;
+        i{
+          display:block;
+        }
+      }
+      span{
+        display:inline-block;
+        line-height:30px;
+        font-size:14px;
+        color:#757575;
+      }
+      span.and-txt{
+        margin:0 10px;
+        color:#333333;
+      }
+      i{
+        display:none;
+        width:20px;
+        height:20px;
+        position:absolute;
+        right:-10px;
+        top:-10px;
+        z-index:10;
+        cursor:pointer;
+        background: url("../images/close.png") center center no-repeat;
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "core/setting";
+@import "core/css3";
+@import "core/media-queries";
+@import "core/mixin";
+@import "core/grid";
+@import "core/reset";
+
+@media (min-width: 1366px){
+  .container {
+    max-width: 1366px;
+  }
+}
+.clear{
+  display:block;
+  clear:both;
+  overflow:hidden;
+}
+.hide{
+  display: none!important;
+}
+.fl{@extend %fl;}
+.fr{@extend %fr;}
+.h5{height:5px;}
+.h10{height:10px;}
+.h15{height:15px;}
+.h20{height:20px;}
+.h30{height:30px;}
+.txt-lf{
+  text-align: left!important;
+}
+.txt-rt{
+  text-align: right!important;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.bg-white{
+  background: $white;
+}
+.bg-gray{
+  background: #efefef;
+}
+.bg-graylight{
+  background: $grayLight;
+}
+.yellow{
+  color:#ffbb28;
+}
+.red{
+  color: #f70000!important;
+}
+
+.router-panel{
+    height:calc(100vh - 69px);
+}
+
+
+// 表格复制提示框样式
+.link-copy-panel{
+  width:100%;
+  overflow: hidden;
+  dt{
+    padding:10px;
+    line-height: 30px;
+    text-align: left;
+    font-weight: normal
+  }
+  dd{
+    padding:10px 0 10px 0;
+    text-align: center;
+    overflow: hidden;
+    button{
+      margin:0 10px;
+    }
+  }
+}
+
+// 表单推广提示框样式
+.promote-share-panel{
+  width:100%;
+  overflow: hidden;
+  padding:10px 0;
+  li{
+    width:80px;
+    height:80px;
+    @extend %fl;
+    border-radius: 3px;
+    overflow: hidden;
+    a{
+      display: block;
+      width:100%;
+      height:100%;
+      padding:12px 0;
+      i{
+        display: block;
+        width:28px;
+        height:28px;
+        margin:0 auto;
+      }
+      span{
+        display: block;
+        height:24px;
+        line-height: 24px;
+        width:100%;
+        text-align: center;
+        color: #333;
+        margin-top: 4px;
+      }
+      &:hover{
+        text-decoration: inherit;
+        background: $primary;
+        span{
+          color: $white;
+          text-decoration: inherit;
+        }
+      }
+    }
+  }
+  li.copy-link{
+    a{
+      i{
+        background: url(../images/icon_link.png) center center no-repeat
+      }
+      &:hover{
+        i{
+          background: url(../images/icon_link_hover.png) center center no-repeat
+        }
+      }
+    } 
+  }
+  li.share-wechat{
+    a{
+      i{
+        background: url(../images/icon_wechat.png) center center no-repeat
+      }
+      &:hover{
+        i{
+          background: url(../images/icon_wechat_hover.png) center center no-repeat
+        }
+      }
+    } 
+  }
+  li.share-sina{
+    a{
+      i{
+        background: url(../images/icon_sina.png) center center no-repeat
+      }
+      &:hover{
+        i{
+          background: url(../images/icon_sina_hover.png) center center no-repeat
+        }
+      }
+    } 
+  }
+}
+
+// 日期控件日期图标样式
+.icons-date{
+  background-image: url('../images/icons_date.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.btn-href{
+  margin-top:2px;
+  display: block;
+  float:left;
+  height:28px;
+  line-height: 26px;
+  padding:0 10px;
+  font-size: 14px;
+  color: #595959;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  &:hover{
+    border:1px solid $blue;
+    color:$blue;
+    text-decoration: none;
+  }
+}
