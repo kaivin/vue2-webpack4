@@ -10,7 +10,7 @@ const appConfig = require('./../../app.config');
 const { VueLoaderPlugin } = require('vue-loader');
 const getStyleLoaderConfig = require('./../style.loader.config');
 const getVueLoaderConfig = require('./../vue-loader.config')
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 // 加载应用工程的webpack配置,例如entry等
 const webpackAppConfig = appConfig.webpack
@@ -134,6 +134,10 @@ module.exports = function (env) {
           appVersion
       }),
       new VueLoaderPlugin(),
+      new BundleAnalyzerPlugin({
+        //  是否在默认浏览器中自动打开报告
+        openAnalyzer: false,
+      })
     ],
     // 寻找模块时的一些缺省设置
     resolve: {

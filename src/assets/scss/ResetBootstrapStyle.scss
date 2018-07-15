@@ -265,8 +265,7 @@
 
 .switch input[type="checkbox"],.switch-inline input[type="checkbox"]{
   position: relative;
-  margin: 5px 23px 0 10px;
-  padding-left: 36px;
+  margin: 5px 23px 4px 10px;
   cursor: pointer;
   width:13px;
   height:13px;
@@ -283,7 +282,7 @@
   left: -10px;
   width: 36px;
   height: 22px;
-  margin-top: -11px;
+  margin-top: -10px;
   background-color: #dadada;
   border: 1px solid #dadada;
   overflow: hidden;

@@ -41,7 +41,7 @@ import '@/assets/scss/ResetBootstrapStyle.scss'
 import '@/assets/scss/iconfont.css'
 ```
 
-这里我在`webpack.base.config.js`中新增了一个配置修改：
+这里我在`webpack.base.config.js`中新增了`src`文件夹的配置参数：
 
 ```
 alias: {
