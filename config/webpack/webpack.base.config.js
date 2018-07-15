@@ -107,6 +107,10 @@ module.exports = function (env) {
     },
     // 插件配置项
     plugins: [
+      new webpack.ProvidePlugin({
+        jQuery: "jquery",
+        $: "jquery"
+      }),
       new CleanWebpackPlugin(
         env === "prod" ? ['bin'] : ['dist'],
         {
@@ -140,6 +144,7 @@ module.exports = function (env) {
         // 别名，可以直接使用别名来代表设定的路径以及其他
         alias: {
             '@config': resolve('../config'),
+            '@': path.resolve(__dirname, '../../src'),
             'views': path.resolve(__dirname, '../../src/views'),
             'components': path.resolve(__dirname, '../../src/components')
         }

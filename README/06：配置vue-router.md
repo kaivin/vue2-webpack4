@@ -1,3 +1,8 @@
+# 配置 vue-router
+
+新建 `src/router/router.js` 文件， 添加如下的代码：
+
+```
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 const ProgressBar = require('progressbar.js')
@@ -94,3 +99,43 @@ router.afterEach((route) => {
 })
 
 export default router
+```
+
+这里路由相关页面，在第三章时让复制一份，此时可以把那些文件拷贝进来，主要包括`components`文件夹下`windows`所包含所有文件，`views/Index`下其他所有文件夹及其内容均可以拷贝过来
+
+此处路由文件，用到了一个插件 `progressbar.js`
+
+
+```
+npm install progressbar.js -S
+```
+
+此插件主要作为页面加载时页面顶部会有一个加载进度条
+
+在使用 `vue-router`时，我这里使用了 `mode:'history'`
+
+这里主要是去掉路由层级中的`/#/`这一层，不使用这一属性时，`vue`页面路由中都会有`/#/`这一层
+
+路由写好，路由相关文件都拷贝进来后，需要修改入口文件`src/index.js`，增加路由引用：
+
+```
+import Vue from 'vue'
+import Index from 'views/Index'
+import router from '@/router/router'
+
+import '@/assets/scss/custom.scss'
+import "@/assets/scss/Public.scss";
+import '@/assets/scss/ResetBootstrapStyle.scss'
+import '@/assets/scss/iconfont.css'
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  render: h => h(Index)
+}).$mount('#app');
+
+
+```
+
+ok 执行命令 `npm start` 查看页面，点击路由相关链接，所有页面都可以正常显示~，到此，一个`vue`单页面应用算是初步完成了，后续会进行细节上的优化，以及与服务端接口对接等操作
