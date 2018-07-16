@@ -49,6 +49,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 new BundleAnalyzerPlugin({
   //  是否在默认浏览器中自动打开报告
   openAnalyzer: false,
+  //  将在“服务器”模式下使用的端口启动HTTP服务器。
+  analyzerPort: 1021, 
 })
 ```
 

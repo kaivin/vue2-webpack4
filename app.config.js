@@ -6,7 +6,7 @@ const ip = require('ip').address();
 
 module.exports = {
     // 主服务启动端口
-    appPort: 8888,
+    appPort: 9527,
     // 本地服务 ip 地址
     appIp: ip,
     // 模板页面标题

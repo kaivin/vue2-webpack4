@@ -137,6 +137,8 @@ module.exports = function (env) {
       new BundleAnalyzerPlugin({
         //  是否在默认浏览器中自动打开报告
         openAnalyzer: false,
+        //  将在“服务器”模式下使用的端口启动HTTP服务器。
+        analyzerPort: 9528, 
       })
     ],
     // 寻找模块时的一些缺省设置
