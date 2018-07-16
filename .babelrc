@@ -12,6 +12,7 @@
     ],
     "plugins": [
         "transform-decorators-legacy",
+        "syntax-dynamic-import",
         ["transform-runtime", {
             "helpers": false, 
             "polyfill": false, 

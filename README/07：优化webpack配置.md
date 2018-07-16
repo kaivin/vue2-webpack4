@@ -56,6 +56,8 @@ new BundleAnalyzerPlugin({
 
 配置完成后，执行`npm start` 命令，运行完成后，终端最后会有`Webpack Bundle Analyzer is started at http://127.0.0.1:`这样的一句话，在浏览器打开这个链接，就可以看你的项目的打包情况
 
+# 优化压缩打包文件
+
 打开该文件，会发现，目前打包了4个文件最大的是`app-vendor`,但是这个文件是从何而来呢？其他三个文件，都可以找到来源，`vendor` 以及`app`是设置的入口文件名，`manifest` 则是`webpack4` 配置的拆分代码时的`runtimeChunk`生成的，那么`app-vendor`同样来至于`webpack4`的拆分代码生成的
 
 

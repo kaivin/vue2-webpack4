@@ -3,12 +3,13 @@ import VueRouter from 'vue-router'
 const ProgressBar = require('progressbar.js')
 
 import BaseSettings from '@/views/Index/BaseSettings'
-import GoodsGroupManagement from '@/views/Index/BaseSettings/GoodsGroupManagement'
-import FlaseSaleSettings from '@/views/Index/BaseSettings/FlaseSaleSettings'
-import FilterPriceRangeSettings from '@/views/Index/BaseSettings/FilterPriceRangeSettings'
 
-import PageManagement from '@/views/Index/PageManagement'
-import TemplateCenter from '@/views/Index/TemplateCenter'
+const GoodsGroupManagement = () => import(/* webpackChunkName: 'GoodsGroupManagement' */ '@/views/Index/BaseSettings/GoodsGroupManagement')
+const FlaseSaleSettings = () => import(/* webpackChunkName: 'FlaseSaleSettings' */ '@/views/Index/BaseSettings/FlaseSaleSettings')
+const FilterPriceRangeSettings = () => import(/* webpackChunkName: 'FilterPriceRangeSettings' */ '@/views/Index/BaseSettings/FilterPriceRangeSettings')
+const PageManagement = () => import(/* webpackChunkName: 'PageManagement' */ '@/views/Index/PageManagement')
+const TemplateCenter = () => import(/* webpackChunkName: 'TemplateCenter' */ '@/views/Index/TemplateCenter')
+
 
 Vue.use(VueRouter)
 
