@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "core/setting";
+@import "core/css3";
+@import "core/media-queries";
+@import "core/mixin";
+@import "core/grid";
+
+.mock-nav{
+    width:240px;
+    height:100%;
+    position: absolute;
+    left:15px;
+    top:0;
+    bottom:0;
+    border-right:1px solid $grayLighter;
+    z-index: 10;
+    overflow: auto;
+    padding:15px 0;
+    .mock-nav-item{
+        width:100%;
+        padding:0 15px 0 0;
+        a{
+            line-height: 24px;
+            &:hover{
+                text-decoration: inherit;
+                color:$primary;
+            }
+        }
+    }
+}
+.mock-panel{
+    width:100%;
+    @extend %clearfix;
+    padding:0 0 0 240px;
+    min-height:300px;
+}
+
+.mock-nav-list{
+    width:100%;
+    overflow: hidden;
+    a{
+        display: block;
+        @extend %fl;
+        height:30px;
+        line-height: 30px;
+        padding:0 20px;
+    }
+}
+
+.mock-data-json{
+    width:100%;
+    padding:30px;
+    overflow: hidden;
+    background: $grayLight;
+}

@@ -47,6 +47,9 @@
           <div class="sub-nav-item">
             <router-link to="/TemplateCenter">模板中心</router-link>
           </div>
+          <div class="sub-nav-item">
+            <router-link to="/MockDataTest">Mock数据测试</router-link>
+          </div>
         </div>
       </div>
     </div>

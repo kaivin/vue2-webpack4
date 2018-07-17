@@ -9,6 +9,10 @@
 @import "core/grid";
 @import "core/reset";
 
+a:hover{
+  text-decoration: inherit;
+  color:$primary;
+}
 @media (min-width: 1366px){
   .container {
     max-width: 1366px;

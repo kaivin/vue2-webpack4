@@ -100,7 +100,7 @@ router.afterEach((route) => {
 export default router
 ```
 
-这里路由相关页面，在第三章时让复制一份，此时可以把那些文件拷贝进来，主要包括`components`文件夹下`windows`所包含所有文件，`views/Index`下其他所有文件夹及其内容均可以拷贝过来
+这里路由相关页面，在第三章时让复制一份，此时可以把那些文件拷贝进来，主要包括`components`文件夹下`windows`所包含所有文件，`views/Index`下其他所有文件夹及其内容均可以拷贝过来, `(MockDataTest)` 除外
 
 在这里有三个文件`GoodsGroupManagement,FlaseSaleSettings,FilterPriceRangeSettings`是属于`BaseSettings`的下级页面，但在这里我并没有使用子路由嵌套的写法，而是写成了兄弟路由，这是因为 **嵌套的子路由要想被渲染，其父页面必须有`<router-view/>`，而这里的子页面是覆盖整个`BaseSettings`页面，如果在此页面加上`<router-view/>`，要隐藏此页面其他内容也是相当麻烦**  所以这里我将他们写成兄弟路由，链接上看来还是父子关系~
 

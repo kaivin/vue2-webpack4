@@ -9,6 +9,8 @@ const FlaseSaleSettings = () => import(/* webpackChunkName: 'FlaseSaleSettings' 
 const FilterPriceRangeSettings = () => import(/* webpackChunkName: 'FilterPriceRangeSettings' */ '@/views/Index/BaseSettings/FilterPriceRangeSettings')
 const PageManagement = () => import(/* webpackChunkName: 'PageManagement' */ '@/views/Index/PageManagement')
 const TemplateCenter = () => import(/* webpackChunkName: 'TemplateCenter' */ '@/views/Index/TemplateCenter')
+const MockDataTest = () => import(/* webpackChunkName: 'MockDataTest' */ '@/views/Index/MockDataTest')
+const NavDataList = () => import(/* webpackChunkName: 'MockDataTest' */ '@/views/Index/MockDataTest/NavDataList')
 
 
 Vue.use(VueRouter)
@@ -53,6 +55,23 @@ const router = new VueRouter({
         path: '/BaseSettings/FilterPriceRangeSettings',
         name: 'FilterPriceRangeSettings',
         component: FilterPriceRangeSettings
+    },
+    {
+        path: '/MockDataTest',
+        name: 'MockDataTest',
+        component: MockDataTest,
+        children: [
+          {
+            path: '',
+            name: 'NavDataList',
+            component: NavDataList
+          },
+          {
+            path: 'NavDataList',
+            name: 'NavDataList',
+            component: NavDataList
+          },
+        ]
     },
   ]
 })
